@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.slick-list {
+  width: 100%;
+}
+
+ul.slick-dots {
+  display: flex!important;
+  justify-content: center;
+  background: rgb(69 69 69 / 0.7);
+  margin-top: -74px;
+  position: relative;
+  height: 70px;
+  align-items: center;
+}
+
+ul.slick-dots li {
+  display: flex;
+}
+
+ul.slick-dots li button {
+  color: transparent;
+  margin: 5px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 7px solid #343434;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+ul.slick-dots li.slick-active button {
+  background: #546130;
+  border-color: #fff;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/************** Sessão 1 **********/
+
+.banners .banner-item {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.banners .banner-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banners .banner-content {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.banners .banner-content h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #546130;
+}
+
+.banners .banner-content p {
+  font-size: 24px;
+  color: #2d3b09;
+}
+
+.banners .banner-content img {
+  height: 50px;
+  width: auto;
+  margin: 30px auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .banners .banner-item {
+    height: auto;
+    padding-bottom: unset;
+  }
+
+  .banners .banner-item img {
+    position: relative;
+  }
+
+  .banners .banner-content {
+    position: relative;
+    background: #454545;
+    top: 0;
+    padding-top: 20px;
+  }
+
+  .banners .banner-content h1 {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .banners .banner-content p {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .banners .banner-content img {
+    margin: 20px 0 -60px;
+  }
+}
+
+/************** Sessão 2 **********/
+
+.cards-area {
+  background: #454545;
+  padding: 40px 0;
+}
+
+.cards-area .container {
+  position: relative;
+}
+
+.cards-area .cards-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.cards-area .cards-controls img {
+  width: 35px;
+  cursor: pointer;
+}
+
+.cards-area .cards-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.cards-area .cards-content .card-item {
+  padding: 0 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.cards-area .cards-content .card-item  h2 {
+  font-size: 20px;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
+
+.cards-area .cards-content .card-item p {
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.cards-area .cards-content .card-item .img-card {
+  position: relative;
+  height: 0;
+  padding-bottom: 56%;
+  border: solid 10px #6f6f6f;
+}
+
+.cards-area .cards-content .card-item .img-card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+}
+
+/************** Sessão 3 **********/
+
+.info-area {
+  background-color: #6f6f6f;
+  padding: 40px 0;
+}
+
+.info-area .info-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info-area .info-content .img-info-content {
+  width: 35%;
+  position: relative;
+  height: 0;
+  padding-bottom: 35%;
+}
+
+.info-area .info-content .img-info-content img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 15px solid #343434;
+}
+
+.info-area .info-content .text-info-content {
+  width: 55%;
+  margin: 20px 0;
+}
+
+.info-area .info-content .text-info-content p {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.info-area .info-content .text-info-content p.bold-text {
+  font-weight: bold;
+}
+
+.info-area .info-content .text-info-content p.italic-text {
+  font-style: italic;
+}
+
+@media (max-width: 992px) {
+
+  .info-area .info-content {
+    flex-direction: column;
+  }
+
+  .info-area .info-content .img-info-content {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  .info-area .info-content .text-info-content {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/************** Sessão 4 **********/
+
+.accordion-area {
+  background: #bebebe;
+  padding: 40px 0;
+}
+
+.accordion-area .accordion-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-area .accordion-content .accordion-item {
+  overflow: hidden;
+}
+
+.accordion-area .accordion-content .accordion-item button.acc-toggle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #6f6f6f;
+  border: none;
+  font-size: 20px;
+  padding: 20px 16px;
+  border-bottom: 1px #fff solid;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.accordion-area .accordion-content .accordion-item.active button.acc-toggle {
+  color: #6f6f6f;
+  background-color: #fff;
+}
+
+.accordion-area .accordion-content .accordion-item button.acc-toggle svg {
+  transition: ease all 400ms;
+  height: 25px;
+}
+
+.accordion-area .accordion-content .accordion-item.active button.acc-toggle svg {
+  fill: #6f6f6f;
+  transform: rotate(-180deg);
+}
+
+.accordion-area .accordion-content .accordion-item .acc-content {
+  transition: ease all 400ms;
+  background-color: #fff;
+  height: 0;
+}
+
+.accordion-area .accordion-content .accordion-item.active .acc-content {
+  height: 290px;
+}
+
+.accordion-area .accordion-content .accordion-item .acc-content .acc-content-int {
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.accordion-area .accordion-content .accordion-item .acc-content .acc-content-int img {
+  width: 33%;
+  margin-right: 20px;
+  border: solid 15px #6f6f6f;
+}
+
+.accordion-area .accordion-content .accordion-item .acc-content .acc-content-int p {
+  color: #6f6f6f;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+@media (max-width: 992px) {
+  
+  .accordion-area .accordion-content .accordion-item.active .acc-content {
+    height: 355px;
+  }
+
+  .accordion-area .accordion-content .accordion-item .acc-content .acc-content-int {
+    flex-direction: column;
+  }
+  
+  .accordion-area .accordion-content .accordion-item .acc-content .acc-content-int img {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .accordion-area .accordion-content .accordion-item .acc-content .acc-content-int p {
+    text-align: center;
+  }
+}
+
+/************** Sessão 5 **********/
+
+.contact-area {
+  background: linear-gradient(160deg,#6f6f6f 50%,#454545 50%);
+  padding: 40px 0;
+}
+
+.contact-area .contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+  grid-template-areas:
+    "name name"
+    "email telephone"
+    "message message"
+    "submit submit";
+}
+
+.contact-area .contact-form input,
+.contact-area .contact-form textarea{
+  width: 100%;
+  background: #bebebe;
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.contact-area .contact-form button {
+  background: #fff;
+  color: #333;
+  border: none;
+  margin: 10px auto;
+  display: flex;
+  padding: 13px 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.contact-area .contact-form > div label {
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-area .contact-form > div.name { 
+  grid-area: name;
+}
+
+.contact-area .contact-form > div.email { 
+  grid-area: email;
+}
+
+.contact-area .contact-form > div.telephone { 
+  grid-area: telephone;
+}
+
+.contact-area .contact-form > div.message { 
+  grid-area: message;
+}
+
+.contact-area .contact-form > div.submit { 
+  grid-area: submit;
+}
+
+@media (max-width: 992px) {
+  .contact-area {
+    background: linear-gradient(125deg,#6f6f6f 50%,#454545 50%);
+  }
+
+  .contact-area .contact-form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "email"
+      "telephone"
+      "message"
+      "submit";
+  }
+}
+
+/************** Footer **********/
+
+footer {
+  background: #343434;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+}
+
